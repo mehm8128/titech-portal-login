@@ -1,0 +1,15 @@
+{
+	"name": "Titech Portal Login",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"content_scripts": [
+		{
+			"matches": ["ここにマトリクスコードを入力する画面のURLを入力"],
+			"js": ["matrix.js"]
+		},
+		{
+			"matches": ["ここに学生番号とパスワードを入力する画面のURLを入力"],
+			"js": ["login.js"]
+		}
+	]
+}

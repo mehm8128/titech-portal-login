@@ -1,10 +1,10 @@
 const string = "ここにマトリクスコードを左上から下向きに進んで羅列していく"
 /*
   例）
-  adg
-  beh
-  cfi
-  ならconst string="adgbehcfi"
+  abcd
+  efgh
+  ijkl
+  ならconst string="abcdefghijkl"
   */
 
 let result = "["

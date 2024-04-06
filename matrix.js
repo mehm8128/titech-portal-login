@@ -2,11 +2,15 @@ const matrixList = []
 //この配列にconvert.jsで生成した配列たちを入れる
 
 for (let i = 0; i < 3; i++) {
-	let inputText = document
+	const tr = document
 		.querySelector("#authentication")
 		.getElementsByTagName("tr")
-		[i + 4].getElementsByTagName("td")[0].innerText
+	[i + 4]
+	// thがpc, tdがspに対応
+	const givenText = tr.getElementsByTagName("th")[0].innerText !== ''
+		? tr.getElementsByTagName("th")[0].innerText
+		: tr.getElementsByTagName("td")[0].innerText
 	document.getElementsByTagName("input")[i + 1].value =
-		matrixList[inputText.charCodeAt(1) - 65][Number(inputText[3]) - 1]
+		matrixList[givenText.charCodeAt(1) - 65][Number(givenText[3]) - 1]
 }
 document.getElementsByTagName("input")[4].click()
